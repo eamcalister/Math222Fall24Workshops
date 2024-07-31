@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Integrals with Computers</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Math-222 Workshops - Fall 2024">
+<meta property="book:author" content="Erich McAlister">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body id="changeme" class="pretext book ignore-math standalone worksheet a4">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="Math_222_Workshops_Fall24.html"><span class="title">Math-222 Workshops - Fall 2024</span></a></h1>
+<p class="byline">Erich McAlister</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"></span><span class="treebuttons"><a class="previous-button button" href="Workshops-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Workshops.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Workshops-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="Workshops.html" class="internal"><span class="codenumber">1</span> <span class="title">The Workshops</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Workshops-3.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Integrals and Kinetic Energy</span></a></div></li>
+<li class="toc-item toc-worksheet active">
+<div class="toc-title-box"><a href="Workshops-4.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Integrals with Computers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Workshops-4.html#some-matlab-commands-and-code" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Some Matlab Commands and Code</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Workshops-4.html#using-an-m-file" class="internal"><span class="codenumber">1.2.1.1</span> <span class="title">Using an .m File</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Workshops-4.html#entering-a-symbolic-function" class="internal"><span class="codenumber">1.2.1.2</span> <span class="title">Entering a Symbolic Function.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Workshops-4.html#doing-calculus-symbolic-functions" class="internal"><span class="codenumber">1.2.1.3</span> <span class="title">Doing Calculus Symbolic Functions.</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Workshops-4.html#using-a-for-loop" class="internal"><span class="codenumber">1.2.1.4</span> <span class="title">Using a For Loop.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Workshops-4.html#exercises" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Exercises.</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Workshops-5.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Worksheet</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Workshops-6.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Worksheet</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="Workshops-7.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Worksheet</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<button class="print-button" title="Print" onClick="window.print()"><span class="name">Print</span></button><section class="worksheet" id="Workshops-4"><h2 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Integrals with Computers</span><div class="print-links">
+<a href="Workshops-4-a4.html" class="a4">A4</a><a href="Workshops-4-letter.html" class="us">US</a>
+</div>
+</h2>
+<div class="para" id="Workshops-4-2">Even though we have learned integration techniques for many integrals in this class, it is often the case that antiderivatives cannot be written in terms of familiar functions (the so called <em class="emphasis">elementary functions</em>, which are essentially all the ones you learn about in Precalculus). When elementary antiderivatives don’t exist (it’s not just that you can’t find them), one must turn to numerical approximation techniques to approximate definite integrals. We learned about these approximation techniques in class. They are very repetitive to do by hand, so we will program a computer to do them. In the process we will learn some Python using the Sympy and Numpy packages. <dfn class="terminology">This workshop is due Wednesday, February 22.</dfn>
+</div>
+<section class="section" id="some-matlab-commands-and-code"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Some Matlab Commands and Code</span>
+</h3>
+<div class="para" id="some-matlab-commands-and-code-2">Whenever you are using Matlab, you will want to have a .m file with the functions, code, and answers all in one place. When you have completed the problems on this workshop, you should print out your .m file and submit it with your answers. A file is posted on Canvas with an example to get you started.</div>
+<div class="para" id="some-matlab-commands-and-code-3">One useful command in Matlab is <code class="code-inline tex2jax_ignore"> help</code>. If you get some output that you don’t understand or are having trouble, you can type <code class="code-inline tex2jax_ignore">help</code> followed by what you want help with and Matlab will attempt to give you some help.</div>
+<section class="subsection" id="using-an-m-file"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1.1</span><span class="space"> </span><span class="title">Using an .m File</span>
+</h4>
+<div class="para" id="using-an-m-file-2">We will be using files with a .m extension as Matlab scripts. The Command Window is what you see if you just open Matlab on a computer. You can get answers to simple one step questions by working directly in the Command Window. However, for more involved problems that need a series of commands it is more useful to put them all in a script, then run them all in their correct sequence with one click. You do this with an .m file.</div>
+<div class="para" id="using-an-m-file-3">To get started, open the .m file posted on Canvas. After it has been opened, save it to somewhere you have access to it. You may want to rename it to something other than Riemannleft since you will modify it to do things other than a left-hand Riemann sum. Once it is saved, you can run the file by just clicking the ‘Run’ button in the script window. If you get a pop up saying that the file is not in the current path, just click on ‘change folder’. Then the output will appear in the Command Window.</div></section><section class="subsection" id="entering-a-symbolic-function"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1.2</span><span class="space"> </span><span class="title">Entering a Symbolic Function.</span>
+</h4>
+<div class="para" id="entering-a-symbolic-function-2">Suppose you would like to define a function like <span class="process-math">\(f(x) = \sin(x^2)\)</span> in Matlab so that you just command Matlab to do things to it later in the script. To do this in your .m file, you would enter the following:syms x<code class="code-inline tex2jax_ignore">f(x) = sin(x^2) </code>
+</div>
+<div class="para" id="entering-a-symbolic-function-3">The syms command declares the independent variable. Then you can do things like evaluate the function by just typing <code class="code-inline tex2jax_ignore">f(a)</code> and hitting ’run’ to find the output for a given input <span class="process-math">\(a\text{.}\)</span> In this case it will just say <code class="code-inline tex2jax_ignore">sin(a^2)</code>, if you want a decimal approximation you type <code class="code-inline tex2jax_ignore">double f(a)</code>. For instance, suppose you want to compute <span class="process-math">\(f(3)\)</span> for the function we defined above. You would type <code class="code-inline tex2jax_ignore">double(f(3))</code> and get an output of <span class="process-math">\(.4121\text{.}\)</span> If you want more decimal places, put the command <code class="code-inline tex2jax_ignore"> format long</code> at the start of your .m file to show more accuracy.</div></section><section class="subsection" id="doing-calculus-symbolic-functions"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1.3</span><span class="space"> </span><span class="title">Doing Calculus Symbolic Functions.</span>
+</h4>
+<div class="para" id="doing-calculus-symbolic-functions-2">You can do Calculus with a symbolic function using the following commands:<code class="code-inline tex2jax_ignore"> diff(f(x),x)</code><code class="code-inline tex2jax_ignore"> int(f(x),x)</code>You can probably guess what those commands do, but try them to find out.</div></section><section class="subsection" id="using-a-for-loop"><h4 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.2.1.4</span><span class="space"> </span><span class="title">Using a For Loop.</span>
+</h4>
+<div class="para" id="using-a-for-loop-2">For loops are a way to program a computer to perform a repetitive task a predetermined number of times. We discussed how a left-hand Riemann sum is really a For loop in class. Here we will discuss the .m file posted on Canvas for evaluating the left-hand Riemann sum approximation for <span class="process-math">\(f(x)\)</span> using <span class="process-math">\(n\)</span> rectangles.</div>
+<div class="para logical" id="using-a-for-loop-3"><ul class="disc">
+<li id="using-a-for-loop-3-1-1"><div class="para" id="using-a-for-loop-3-1-1-1">The first five lines of code should have fairly clear meaning.</div></li>
+<li id="using-a-for-loop-3-1-2"><div class="para" id="using-a-for-loop-3-1-2-1">In line six we must initialize the sum <code class="code-inline tex2jax_ignore">LS</code> (for “left sum”) to be zero. Each time it runs through the loop it will add on another term.</div></li>
+<li id="using-a-for-loop-3-1-3"><div class="para" id="using-a-for-loop-3-1-3-1">The “for” statement just has the limits you would have on the sum using <span class="process-math">\(\Sigma\)</span> notation.</div></li>
+<li id="using-a-for-loop-3-1-4"><div class="para" id="using-a-for-loop-3-1-4-1">To understand the evaluation, just note that <span class="process-math">\(\Delta x = \dfrac{b-a}{n}\)</span> and <span class="process-math">\(x_i = a + i\Delta x\)</span> using the normal left Riemann sum notation.</div></li>
+</ul></div></section></section><section class="section" id="exercises"><h3 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Exercises.</span>
+</h3>
+<div class="para logical" id="exercises-2">
+<div class="para">For these exercises, we will be considering the definite integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{1}^{2} \frac{x}{e^{x}-1}\,dx.
+\end{equation*}
+</div>
+</div>
+<article class="exercise exercise-like" id="exercises-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
+<ol class="lower-alpha">
+<li id="exercises-3-1-1"><div class="para" id="exercises-3-1-1-1">(2 points) Describe where you get stuck doing this integral by hand.</div></li>
+<li id="exercises-3-1-2"><div class="para" id="exercises-3-1-2-1">(2 points) What does Matlab give you for an antiderivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> (enter <code class="code-inline tex2jax_ignore">exp(x)</code> for <span class="process-math">\(e^{x}\)</span>)? Is it useful (to you)?</div></li>
+</ol></article><article class="exercise exercise-like" id="exercises-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
+<ol class="lower-alpha">
+<li id="exercises-4-1-1"><div class="para" id="exercises-4-1-1-1">(6 points)  Use a graph of the derivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> to help you find <span class="process-math">\(n\)</span> so that the LEFT and RIGHT approximation of this integral is within <span class="process-math">\(0.001\)</span> of the exact value. Find this approximation. Include a printout of the graph of the derivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> in your write-up.</div></li>
+<li id="exercises-4-1-2"><div class="para" id="exercises-4-1-2-1">(6 points) Using the <span class="process-math">\(n\)</span> you found in (2a), what do the other methods give as approximations. What is the maximum possible error for each method of approximation? Include any relevant graphs to show how you arrived at your error bounds.</div></li>
+<li id="exercises-4-1-3"><div class="para" id="exercises-4-1-3-1">(6 points) For each of MID, TRAP, and SIMP, how large must $n$ be to make the approximation within <span class="process-math">\(0.001\)</span> of the exact value of this integral? Be sure to explain your reasoning.</div></li>
+</ol></article></section></section>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Workshops-3.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Workshops-5.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
