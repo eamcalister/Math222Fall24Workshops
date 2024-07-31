@@ -1,0 +1,65 @@
+\documentclass[letterpaper,11pt]{examPTP}
+%\documentclass[letterpaper,11pt,answers]{examPTP}
+\usepackage{amsmath}
+\usepackage{txfonts,graphicx}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{headerPTP,diffeqPTP}
+
+\renewcommand{\quizno}{Workshop 5}
+\renewcommand{\quizdate}{April 3, 2017}
+\renewcommand{\course}{Calc II (Math 222)}
+\renewcommand{\instructorname}{}
+
+\begin{document}
+\pagestyle{headandfoot}
+
+
+\noindent \underline{\hspace{6.5in}}
+
+
+\begin{center}
+\addpoints
+\gradetable[h]  
+\end{center}
+\workshopinstructions
+\\
+{\bf This workshop is due Friday, April 21.} Work in teams, and turn in one carefully written copy per team. It is strongly encouraged that each student write up their own copy even if it is not the copy that gets turned in.
+\par 
+
+\begin{questions}
+\question Dr. McAlister recently cooked his traditional Easter rack of lamb, but it was a disaster! He totally overcooked it. He knows, based on his knowledge of Newton's Law of Cooling and some measurements to determine the thermal capacity his $2$ lb. rack, that the internal temperature $H$ (for heat), in $^{\circ}$F, in a $300^{\circ}$F oven satisfies the differential equation
+\[
+H^{\prime} = -.62(H-300),
+\]
+where $t$ is the time, in hours, after the rack is placed in the oven. After a quick sear on the outside, the initial temperature of his rack of lamb is $H(0) = 60$. In order for the meat to be medium rare, it needs to have an internal temperature of $135^{\circ}$F. You will answer how long to cook the rack of lamb using a better version of Euler's Method using second degree Taylor polynomials.
+\begin{parts}
+\part[4] Use the given differential equation and implicit differentiation to find an expression of $H''$ in terms of $H$.
+\part[6] Using the expression for $H^{\prime\prime}$ you found in (a), you can construct a second degree Taylor polynomial at each point and use it to construct approximations to $H(t)$ just like Euler's method does with linear approximations. A start for your table is given below:
+\begin{center}
+\begin{tabular}{| c | c | c | c | c |}
+\hline  \ & \ & \ & \ & \\
+$t$ & Current $H$ & $H^{\prime}$ & $H^{\prime\prime}$ & Next $H$ = (Current $H$)$+H^{\prime}\Delta{t} + \frac{H^{\prime\prime}}{2}(\Delta{t})^2$ \\
+ \ & \ & \ & \ & \\
+\hline $0$ & $60$ & $148.8$ & $-92.256$ & $74.42$\\
+\hline $\vdots$ & $\vdots$ &$\vdots$ & $\vdots$ & $\vdots$ \\
+\hline
+\end{tabular}
+\end{center}
+Using this method with step size $\Delta t = .1$, find the first time that the temperature of the rack is over $135^{\circ}$F. Use the sign of the third derivative to decide if this is an overestimate or an underestimate of the time it takes to reach $135^{\circ}$F.
+\end{parts}
+
+\question[10] Consider the initial value problem
+\[
+y'' + 4y = 0\ \ ,y(0)= 0\ \ ,y'(0) = 3.
+\]
+Use implicit differentiation to find all the derivatives of $y$ at $t=0$, then use your answers to construct a Taylor series for the solution to this initial value problem. What is the more familiar formula for this solution?
+  
+
+\end{questions}
+
+
+\vspace{0.5in}
+
+\end{document}

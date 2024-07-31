@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="Workshops" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Workshops</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="workshop1.ptx" />
+  <xi:include href="workshop2.ptx" /><!--Needs work to turn into python!-->
+  <xi:include href="workshop3.ptx" />
+  <xi:include href="workshop4.ptx" />
+  <xi:include href="workshop5.ptx" />
+
+</chapter>

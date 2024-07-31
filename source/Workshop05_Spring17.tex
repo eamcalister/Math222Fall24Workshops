@@ -1,0 +1,94 @@
+\documentclass[letterpaper,11pt]{examPTP}
+%\documentclass[letterpaper,11pt,answers]{examPTP}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{headerPTP,diffeqPTP}
+
+\renewcommand{\quizno}{Workshop 5}
+\renewcommand{\quizdate}{April 3, 2017}
+\renewcommand{\course}{Calc II (Math 222)}
+\renewcommand{\instructorname}{}
+
+\begin{document}
+\pagestyle{headandfoot}
+
+
+\noindent \underline{\hspace{6.5in}}
+
+
+\begin{center}
+\addpoints
+\gradetable[h]  
+\end{center}
+\workshopinstructions
+\\
+{\bf This workshop is due Friday, April 7.} Work in teams, and turn in one carefully written copy per team. It is strongly encouraged that each student write up their own copy even if it is not the copy that gets turned in.
+\par 
+The goal of this workshop is to connect the error bound for Taylor polynomial approximations to an error bound for a numerical integration method. Specifically, we will work through proving the error bound
+\[
+\left|\int_{a}^{b} f(x)\,dx - \mbox{MID}(n)\right|\leq \frac{M(b-a)^3}{24n^2}
+\]
+when $|f''(x)|\leq M$ for $a\leq x\leq b$.
+\par
+The main student learning goals for this assignment are the following:
+\begin{itemize}
+\item You should become more comfortable with abstract mathematical notation and concepts.
+\item You will better understand the connection between the midpoint rule and linear approximation.
+\item You will become more accustomed to translating between verbal/visual descriptions of mathematics and symbolic manipulation. This is a critical communication skill in STEM disciplines.
+\end{itemize} 
+\par
+Before we begin the questions, we first need to set up the notation for all of the questions. We will have a function $f(x)$ that is defined and twice differentiable for $a\leq x\leq b$. We suppose that $|f''(x)|\leq M$ for all $a\leq x\leq b$. The interval $[a,b]$ is subdivided into $n$ intervals of equal length $\Delta x = \frac{b-a}{n}$. The endpoints of each sub-interval are labeled as follows:
+\begin{eqnarray*}
+x_0 & = &a\\
+x_1 & = &a+\Delta x\\
+\ & \vdots & \\
+x_i & = & a + i\Delta x\\
+\ & \vdots & \\
+x_n & = & b.\\
+\end{eqnarray*}
+The midpoints of each sub-interval are given by $m_i = \frac{x_i+x_{i+1}}{2}$. 
+
+\begin{questions}
+\question[4] In terms of $\Delta x$ what are the quantities $(x_{i+1}-x_i)$, $(x_{i+1}-m_i)$, and $(x_{i} - m_i)$. Show your answers algebraically and explain with a picture.
+
+\pagebreak
+
+\question
+\begin{parts}
+\part[4] Show that
+\[
+\int_{x_i}^{x_{i+1}} f(m_i) + f'(m_i)(x-m_i)\, dx = f(m_i)\Delta x.
+\]
+\part[4] What does $f(m_i) + f'(m_i)(x-m_i)$ represent? Use a picture to explain why the result of part (a) makes sense geometrically. (You may want to go back and look at your notes on the midpoint rule.)
+\part[4] Explain why 
+\[
+\int_{a}^{b} f(x)\,dx = \sum_{i=0}^{n-1}\int_{x_i}^{x_{i+1}} f(x)\,dx
+\]
+and use the result of part (a) to explain why
+\[
+\mbox{MID}(n)  = \sum_{i=0}^{n-1} \int_{x_i}^{x_{i+1}} f(m_i) + f'(m_i)(x-m_i)\,dx.
+\] 
+\end{parts}
+
+\question Now we'll put it together.
+\begin{parts}
+\part[6]
+Use the error bound for Taylor polynomials to show that
+\[
+\left|\int_{x_i}^{x_{i+1}} f(x) - (f(m_i) + f'(m_i)(x-m_i))\,dx\right|\leq \frac{M(x_{i+1} - m_i)^{3}}{6} - \frac{M(x_{i} - m_i)^{3}}{6}.
+\]
+\part[4] Use one of your answers to question (1) to show the right-hand side of the inequality in part (a) simplifies to
+\[
+\frac{M(b-a)^3}{24n^3}.
+\]
+\part[4] Use (2c) and part (b) of this question to show the error bound for $\mbox{MID}(n)$ given at the top of this workshop.
+\end{parts} 
+
+\end{questions}      
+
+\vspace{0.5in}
+
+\end{document}

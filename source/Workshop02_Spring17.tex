@@ -1,0 +1,93 @@
+\documentclass[letterpaper,11pt]{examPTP}
+%\documentclass[letterpaper,11pt,answers]{examPTP}
+\usepackage{amsmath}
+\usepackage{txfonts,graphicx}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\usepackage{headerPTP,diffeqPTP}
+
+\renewcommand{\quizno}{Workshop 2}
+\renewcommand{\quizdate}{Febraury 20, 2017}
+\renewcommand{\course}{Calc II (Math 222)}
+\renewcommand{\instructorname}{}
+
+\begin{document}
+\pagestyle{headandfoot}
+
+
+\noindent \underline{\hspace{6.5in}}
+
+Even though we have learned integration techniques for many integrals in this class, it is often the case that antiderivatives cannot be written in terms of familiar functions (the so called {\it elementary functions}, which are essentially all the ones you learn about in Precalculus). When elementary antiderivatives don't exist (it's not just that you can't find them), one must turn to numerical approximation techniques to approximate definite integrals. We learned about these approximation techniques in class. They are very repetitive to do by hand, so we will program a computer to do them. In the process we will learn some Matlab using Matlab's Symbolic Toolbox. {\bf  This workshop is due Wednesday, February 22.}
+
+\begin{center}
+\addpoints
+\gradetable[h]  
+\end{center}
+\workshopinstructions
+
+\section*{Some Matlab Commands and Code}
+Whenever you are using Matlab, you will want to have a .m file with the functions, code, and answers all in one place. When you have completed the problems on this workshop, you should print out your .m file and submit it with your answers. A file is posted on Canvas with an example to get you started.
+\par 
+One useful command in Matlab is \verb! help!. If you get some output that you don't understand or are having trouble, you can type \verb!help! followed by what you want help with and Matlab will attempt to give you some help.
+
+\subsection*{Using an .m File}
+We will be using files with a .m extension as Matlab scripts. The Command Window is what you see if you just open Matlab on a computer. You can get answers to simple one step questions by working directly in the Command Window. However, for more involved problems that need a series of commands it is more useful to put them all in a script, then run them all in their correct sequence with one click. You do this with an .m file.
+\par
+To get started, open the .m file posted on Canvas. After it has been opened, save it to somewhere you have access to it. You may want to rename it to something other than Riemann\textunderscore left since you will modify it to do things other than a left-hand Riemann sum. Once it is saved, you can run the file by just clicking the `Run' button in the script window. If you get a pop up saying that the file is not in the current path, just click on `change folder'. Then the output will appear in the Command Window.    
+
+\pagebreak
+
+\subsection*{Entering a Symbolic Function.}
+Suppose you would like to define a function like $f(x) = \sin(x^2)$ in Matlab so that you just command Matlab to do things to it later in the script. To do this in your .m file, you would enter the following:\\
+
+\noindent\ttfamily
+syms x\\
+\verb!f(x) = sin(x^2) ! \\
+\normalfont
+
+The \ttfamily syms \normalfont command declares the independent variable. Then you can do things like evaluate the function by just typing \verb!f(a)! and hitting 'run' to find the output for a given input $a$. In this case it will just say \verb!sin(a^2)!, if you want a decimal approximation you type \verb!double f(a)!. For instance, suppose you want to compute $f(3)$ for the function we defined above. You would type \verb!double(f(3))! and get an output of $.4121$. If you want more decimal places, put the command \verb! format long! at the start of your .m file to show more accuracy.
+
+
+\subsection*{Doing Calculus Symbolic Functions.}
+You can do Calculus with a symbolic function using the following commands:\\
+
+\noindent\verb! diff(f(x),x)! \\
+\verb! int(f(x),x)!\\
+
+\noindent You can probably guess what those commands do, but try them to find out. 
+
+\subsection*{Using a For Loop.}
+For loops are a way to program a computer to perform a repetitive task a predetermined number of times. We discussed how a left-hand Riemann sum is really a For loop in class. Here we will discuss the .m file posted on Canvas for evaluating the left-hand Riemann sum approximation for $f(x)$ using $n$ rectangles. 
+\begin{itemize}
+\item The first five lines of code should have fairly clear meaning.
+\item In line six we must initialize the sum \verb!LS! (for ``left sum'') to be zero. Each time it runs through the loop it will add on another term.
+\item The ``for'' statement just has the limits you would have on the sum using $\Sigma$ notation.
+\item To understand the evaluation, just note that $\Delta x = \dfrac{b-a}{n}$ and $x_i = a + i\Delta x$ using the normal left Riemann sum notation.
+\end{itemize}
+
+\subsection*{Exercises.} 
+ 
+For these exercises, we will be considering the definite integral
+\[
+\int_{1}^{2} \frac{x}{e^{x}-1}\,dx.
+\]
+
+\begin{questions}
+\question 
+\begin{parts}
+\part[2] Describe where you get stuck integrating this by hand.
+\part[2] What does Matlab give you for an antiderivative of $\dfrac{x}{e^{x}-1}$ (enter \verb!exp(x)! for $e^{x}$)? Is it useful? 
+\end{parts}  
+
+\question
+\begin{parts}
+\part[6] Use a graph of the derivative of $\dfrac{x}{e^{x}-1}$ to help you find $n$ so that the LEFT and RIGHT approximation of this integral is within $0.001$ of the exact value. Find this approximation. Include a printout of the graph of the derivative of $\dfrac{x}{e^{x}-1}$ in your write-up.
+\part[6] Using the $n$ you found in (2a), what do the other methods give as approximations. What is the maximum possible error for each method of approximation? Include any relevant graphs to show how you arrived at your error bounds.
+\part[6] For each of MID, TRAP, and SIMP, how large must $n$ be to make the approximation within $0.001$ of the exact value of this integral? Be sure to explain your reasoning.
+\end{parts}   
+
+\end{questions}      
+
+\vspace{0.5in}
+
+\end{document}

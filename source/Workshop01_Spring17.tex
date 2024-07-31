@@ -1,0 +1,73 @@
+\documentclass[letterpaper,11pt]{examPTP}
+%\documentclass[letterpaper,11pt,answers]{examPTP}
+\usepackage{amsmath}
+\usepackage{txfonts,graphicx}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+
+\usepackage{headerPTP,diffeqPTP}
+
+\renewcommand{\quizno}{Workshop 1}
+\renewcommand{\quizdate}{February 13, 2017}
+\renewcommand{\course}{Calc II (Math 222)}
+\renewcommand{\instructorname}{}
+
+\begin{document}
+\pagestyle{headandfoot}
+
+
+\noindent \underline{\hspace{6.5in}}
+
+
+\begin{center}
+\addpoints
+\gradetable[h]  
+\end{center}
+\workshopinstructions
+
+In this workshop you will find the formula for the kinetic energy of an object of mass $m$ and velocity $V$, then apply this formula to find the total kinetic energy of a spinning sphere.
+
+
+\begin{questions}
+
+
+\question (The formula for kinetic energy.)\\
+\noindent{\bf Things you'll need for this exercise:}
+Velocity = $v(t)$ = The rate of change in position.\\
+Acceleration = $a(t) = v^{\prime}(t)$ = the rate of change in velocity.\\
+Force equals mass$\times$acceleration $F = ma = mv^{\prime}$\\
+Work = Force$\times$distance when the force is constant.\\
+
+The key to finding a formula for kinetic energy is to observe that the kinetic energy of an object of mass $m$ and velocity $V$ is the work done in accelerating that object to velocity $V$ from rest. Assuming that velocity $V$ is achieved when $t=T$, the work integral to calculate kinetic energy is
+\begin{eqnarray*}
+\mbox{Kinetic Energy} & = & \mbox{work done in accelerating to velocity $V$}\\
+\ & = & \int_{0}^{T} mv^{\prime}(t)v(t)\,dt,
+\end{eqnarray*}
+where the velocity $V$ is reached after $T$ seconds.
+\begin{parts}
+\part[3] Explain how the integral given above gives the work done in accelerating an object of mass $m$ to a velocity $V$. 
+\part[5] Evaluate the integral given above to compute the work done in accelerating an object of mass $m$ from rest (when $t = 0$) to a velocity $V$ when $t = T$ to get the formula for the kinetic energy. Hint: Use a standard integration technique.
+\end{parts}
+
+\question (Kinetic energy of a spinning disk.) In order to find the kinetic energy of a spinning sphere (in the next problem), we first need to find the kinetic energy in a spinning disk. Suppose this disk has a radius of $x$ meters, a thickness $\Delta h$, uniform density $\delta$ kg/m$^3$, and is spinning at a rate of $\omega$ radians/s around an axis through its center perpendicular to the disk. To find its total kinetic energy, we slice it into rings of radius $r$ and width $\Delta r$.
+\begin{parts}
+\part[4] Find the mass, in kg, and velocity, in m/s, of each ring. Use this and the formula you derived in problem 1 to find the kinetic energy of a ring.
+\part[4] Use and integral to find the total kinetic energy of the disk.
+\end{parts}
+
+\question[8] (Kinetic energy of the sphere.) Now consider a sphere of radius $R$ m, uniform density $\delta$ kg/m$^3$, spinning around an axis at $\omega$ radians/s. By slicing the sphere into disks, find the kinetic energy of this sphere.
+
+\question In the 2016 Major League season, the fastest pitch thrown was a 105.1 mph fastball by Aroldis Chapman. The spin rate on that pitch was 2617 rpm.
+\begin{parts}
+\part[3] Assuming a baseball is of uniform density (it isn't), what was the total kinetic energy of Chapman's pitch? (You will need to find out the size and mass of a baseball for this, and convert some units.)
+\part[3] The highest recorded spin rate in the 2016 season was 3498 rpm on an 80 mph curveball by Seth Lugo. Did Lugo's spin rate make his pitch comparable to Chapman's in terms of kinetic energy?
+\end{parts}
+
+\question[10] Find the formula for the kinetic energy of a disk of radius $R$ and density $\delta$, spinning end over end like a flipped coin.
+
+
+\end{questions}      
+
+\vspace{0.5in}
+
+\end{document}
