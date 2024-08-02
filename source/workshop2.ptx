@@ -4,96 +4,78 @@
 <worksheet><title>Integrals with Computers</title>
 
 	<p>
-		Even though we have learned integration techniques for many integrals in this class, it is often the case that antiderivatives cannot be written in terms of familiar functions (the so called <em>elementary functions</em>, which are essentially all the ones you learn about in Precalculus). When elementary antiderivatives don't exist (it's not just that you can't find them), one must turn to numerical approximation techniques to approximate definite integrals. We learned about these approximation techniques in class. They are very repetitive to do by hand, so we will program a computer to do them. In the process we will learn some Python using the Sympy and Numpy packages. <term>This workshop is due Wednesday, February 22.</term>
+		Even though we have learned integration techniques for many integrals in this class, it is often the case that antiderivatives cannot be written in terms of familiar functions (the so called <em>elementary functions</em>, which are essentially all the ones you learn about in Precalculus). When elementary antiderivatives don't exist (it's not just that you can't find them), one must turn to numerical approximation techniques to approximate definite integrals. We learned about these approximation techniques in class. They are very repetitive to do by hand, so we will program a computer to do them. In the process we will learn some Python using the Sympy and Numpy packages.
 	</p>
 
 
-	<section xml:id="some-matlab-commands-and-code">
-		<title>Some Matlab Commands and Code</title>
-
-		<p>
-			Whenever you are using Matlab, you will want to have a .m file with the functions, code, and answers all in one place. When you have completed the problems on this workshop, you should print out your .m file and submit it with your answers. A file is posted on Canvas with an example to get you started.
-		</p>
-
-		<p>
-			One useful command in Matlab is <c> help</c>. If you get some output that you don't understand or are having trouble, you can type <c>help</c> followed by what you want help with and Matlab will attempt to give you some help.
-		</p>
 
 
-		<subsection xml:id="using-an-m-file">
-			<title>Using an .m File</title>
+		<section xml:id="symbolic_integration">
+			<title>Symbolic Integration</title>
+			<p>
+				To do integrals and derivatives symbolically (i.e. to get a formulas), we use the Sympy package. The following is straightforward to use.
+			</p>
+			<program language="python$">
+<input>
+import sympy as sp
+
+#define your variable as a symbol
+x = sp.symbols('x')
+
+#define your function
+f = x**2
+
+print(sp.integrate(f,x))
+print(sp.diff(f,x))
+</input>
+			</program>
+
+		</section>
+
+		<section xml:id="numerical_methods">
+			<title>Numerical Methods</title>
 
 			<p>
-				We will be using files with a .m extension as Matlab scripts. The Command Window is what you see if you just open Matlab on a computer. You can get answers to simple one step questions by working directly in the Command Window. However, for more involved problems that need a series of commands it is more useful to put them all in a script, then run them all in their correct sequence with one click. You do this with an .m file.
+				In this section we give a Python script for a right-hand Riemann sum. You can find a Jupyter notebook on Canvas that has this, as well as a left-hand Riemann sum and the midpoint rule. Since we know the trapezoid rule and Simpson's rule are computed from these, that's all we'll code up right now. 
 			</p>
 
 			<p>
-				To get started, open the .m file posted on Canvas. After it has been opened, save it to somewhere you have access to it. You may want to rename it to something other than Riemannleft since you will modify it to do things other than a left-hand Riemann sum. Once it is saved, you can run the file by just clicking the <sq>Run</sq> button in the script window. If you get a pop up saying that the file is not in the current path, just click on <sq>change folder</sq>. Then the output will appear in the Command Window.
+				The right-hand Riemann sum is below, with some further explanation for those who know some Python.
 			</p>
+			<program language="python$">
+				<input>
+					import numpy as np
 
-		</subsection>
 
-		<subsection xml:id="entering-a-symbolic-function">
-			<title>Entering a Symbolic Function.</title>
+					#right-hand Riemann sum
+					def right_hand_rule(f,a,b,n): #a and b are the endpoints and n is the number of rectangles
+						x = np.linspace(a,b,n+1) #this creates the set of n+1 evenly spaced points starting at a and ending at b.
+						y = f(x)
+						h = (b-a)/n
+						integral = h*np.sum(y[1:n+1])
+						return integral
+					
+					
+					#### Don't Modify above this line.
+					
+					#define function to integrate
+					def f(x):
+						return x**2 #change this function as needed
+					
+					#Give the endpoints and number of sub-intervals
+					a = 0
+					b = 2
+					n = 3
+					
+					print(right_hand_rule(f,a,b,n))	
+				</input>
+			</program>
 
-			<p>
-				Suppose you would like to define a function like <m>f(x) = \sin(x^2)</m> in Matlab so that you just command Matlab to do things to it later in the script. To do this in your .m file, you would enter the following:<!-- linebreak -->syms x<!-- linebreak --><c>f(x) = sin(x^2) </c><!-- linebreak -->
-			</p>
+		</section>
 
-			<p>
-				The syms command declares the independent variable. Then you can do things like evaluate the function by just typing <c>f(a)</c> and hitting ’run’ to find the output for a given input <m>a</m>. In this case it will just say <c>sin(a^2)</c>, if you want a decimal approximation you type <c>double f(a)</c>. For instance, suppose you want to compute <m>f(3)</m> for the function we defined above. You would type <c>double(f(3))</c> and get an output of <m>.4121</m>. If you want more decimal places, put the command <c> format long</c> at the start of your .m file to show more accuracy.
-			</p>
-
-		</subsection>
-
-		<subsection xml:id="doing-calculus-symbolic-functions">
-			<title>Doing Calculus Symbolic Functions.</title>
-
-			<p>
-				You can do Calculus with a symbolic function using the following commands:<!-- linebreak --><c> diff(f(x),x)</c><!-- linebreak --><c> int(f(x),x)</c><!-- linebreak -->You can probably guess what those commands do, but try them to find out.
-			</p>
-
-		</subsection>
-
-		<subsection xml:id="using-a-for-loop">
-			<title>Using a For Loop.</title>
-
-			<p>
-				For loops are a way to program a computer to perform a repetitive task a predetermined number of times. We discussed how a left-hand Riemann sum is really a For loop in class. Here we will discuss the .m file posted on Canvas for evaluating the left-hand Riemann sum approximation for <m>f(x)</m> using <m>n</m> rectangles.
-			</p>
-
-			<p><ul>
-				<li>
-							<p>
-								The first five lines of code should have fairly clear meaning.
-							</p>
-				</li>
-
-				<li>
-							<p>
-								In line six we must initialize the sum <c>LS</c> (for <q>left sum</q>) to be zero. Each time it runs through the loop it will add on another term.
-							</p>
-				</li>
-
-				<li>
-							<p>
-								The <q>for</q> statement just has the limits you would have on the sum using <m>\Sigma</m> notation.
-							</p>
-				</li>
-
-				<li>
-							<p>
-								To understand the evaluation, just note that <m>\Delta x = \dfrac{b-a}{n}</m> and <m>x_i = a + i\Delta x</m> using the normal left Riemann sum notation.
-							</p>
-				</li>
-
-			</ul></p>
-
-		</subsection>
-	</section>
 
 		<section xml:id="exercises">
-			<title>Exercises.</title>
+			<title>Exercises</title>
 
 			<p>
 				For these exercises, we will be considering the definite integral <me>\int_{1}^{2} \frac{x}{e^{x}-1}\,dx.</me>
@@ -134,9 +116,8 @@
 			</ol>
 			</exercise>  
 			
-
-
 		</section>
+
 
 
 </worksheet>
