@@ -3,13 +3,69 @@
 
 <worksheet><title>Geometric Series Applications</title>
 
-	<p>
-		Suppose you want to purchase a house that costs <m>\$250,000</m>. The annual interest rate on your loan will be <m>3\%</m> (so <m>0.25\%</m> monthly), and the loan term will be 30 years and the monthly payment will be <m>M</m> dollars. We want to solve for <m>M</m>. Assume you make your first payment at the end of the first month you have possession of the house.
-	</p>
+<p>
+	In this workshop we will:
+</p>
+<objectives>
+	<ol>
+		<li>
+			<p>
+				use the formula for the sum of a finite geometric series to solve a common real-life problem and 
+			</p>
+		</li>
+		<li>
+			<p>
+				use the formula for the sum of an infinite geometric series to write a repeating decimal as a fraction.
+			</p>
+		</li>
+	</ol>
+</objectives>
 
+<exercise>
+	<p>
+		Suppose you want to purchase a house that costs <m>\$450,000</m>. The annual interest rate on your loan will be <m>3\%</m> (so <m>0.25\%</m> monthly), the loan term will be <m>30</m> years, and the monthly payment will be <m>M</m> dollars. We want to solve for <m>M</m>. Assume you make your first payment at the end of the first month you have possession of the house.
+	</p>
+	<ol>
+		<li>
+			<p>
+				(5 points) Write simplified formulas for the amount owed on the house, in terms of <m>M</m>, after you have owned the house for <m>1</m>, <m>2</m>, <m>3</m>, and <m>4</m> months. You don't make a payment until the end of the first month.
+			</p>
+		</li>
+		<li>
+			<p>
+				(5 points) Use the pattern established in part (a) to write a simplified formula for the amount owed after you have had the house for <m>k</m> months (where <m>k\leq 360</m>).
+			</p>
+		</li>
+		<li>
+			<p>
+				(5 points) The value of <m>M</m> will be the value such that the total amount owed on the house after <m>360</m> months is zero. Use this and the finite geometric series formula to solve for <m>M</m>.
+			</p>
+		</li>
+	</ol>
+</exercise>
+
+<exercise>
 	<p>
 		The goal of this problem is to write a repeating decimal as a fraction using a geometric series. We begin by recognizing a given geometric series as a repeating decimal.
 	</p>
+	<ol>
+		<li>
+			<p>
+				(5 points) Consider the geometric series <m>\displaystyle \sum_{n=0}^{\infty}789\left(\frac{1}{1000}\right)^n</m>. Write the first four partial sums of this series in decimal form (don't use a calculator). What repeating decimal does the infinite series represent?
+			</p>
+		</li>
+		<li>
+			<p>
+				(5 points) Use the formula for the sum of a geometric series to write the repeating decimal in part (a) as a fraction.
+			</p>
+		</li>
+		<li>
+			<p>
+				(5 points) Use ideas from part (a) and (b) to write <m>.\overline{9}</m> as a reduced fraction.
+			</p>
+		</li>
+	</ol>
+</exercise>
 
 
 </worksheet>

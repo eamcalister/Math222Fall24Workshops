@@ -17,9 +17,7 @@
 
   <colophon>
 
-    <!--website>
-      <url href="https://pretextbook.org">My Website</url>
-    </website-->
+
 
     <copyright>
       <year>2024</year>
@@ -28,5 +26,63 @@
       </shortlicense>
     </copyright>
   </colophon>
+
+  <preface><title>Instructions for Students</title>
+  <p>
+    First we will address what a Calculus "workshop" is and why your professor has you doing them. 
+    <ul>
+      <li>
+        <p>
+          A workshop is a set of problems that are usually on the more difficult end of the difficulty spectrum.
+        </p>
+      </li>
+      <li>
+        <p>
+          The problems in a workshop will usually bring together material from several days (or textbook sections) of class and ask you to apply it in interesting ways.
+        </p>
+      </li>
+      <li>
+        <p>
+          Because workshops are done in groups and written up carefully (see instructions below), workshops will help develop your technical, in particular mathematical, communication skills.
+        </p>
+      </li>
+      <li>
+        <p>
+          Workshops also allow us to pause and figure out if we really understand the things we have been learning. By letting you work on them in class (over a day or somethimes two) and giving detailed feedback, your professor uses them as formative assessment (which also helps you).
+        </p>
+      </li>
+    </ul>
+    
+  </p>
+
+  <p>
+    <term>Workshop Instructions:</term>
+    <ul>
+      <li>
+        <p>
+          You will work in groups of two or (at most) three. Groups will be recorded for these assignments on Canvas and one assignment will be turned in per group. All group members will receive the same grade. <em>The intention is that all members of the group will complete and understand the solution to every problem. Do not use a "divide and conquer" strategy.</em>
+        </p>
+      </li>
+      <li>
+        <p>
+          Your write-up should be either typed or neatly handwritten. Be sure that you answer every part of every question and show all your work. Incomplete answers or illegible work will result in a reduced grade.
+        </p>
+      </li>
+      <li>
+        <p>
+          To reiterate that one of the objectives of a workshop is to practice mathematical communication, <em>treat your classmates as the target audience of your writting.</em> Your professor is really good at filling in gaps in your work, but most people might not be able to do that. This is why you need to show work.
+        </p>
+      </li>
+      <li>
+        <p>
+          Due dates for workshops will be stated in class on the day they are assigned and indicated on Canvas.
+        </p>
+      </li>
+    </ul>
+  </p>
+  
+
+  </preface>
+
 </frontmatter>
 

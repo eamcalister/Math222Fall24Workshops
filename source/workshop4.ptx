@@ -3,20 +3,80 @@
 
 <worksheet><title>Being Careful with Series</title>
 
+<p>
+	In this workshop we will:
+</p>
+<objectives>
+	<ol>
+		<li>
+			<p>
+				analyze proposed answers to series convergence questions which may have forgotten to check a hypothsis of a convergence test and 
+			</p>
+		</li>
+		<li>
+			<p>
+				carefully (showing <em>all</em> work) answer several convergence questions for assessment purposes. 
+			</p>
+		</li>
+	</ol>
+</objectives>
 
+<exercise>
 	<p>
-	<term>This workshop is due Monday, March 27.</term> You may work in groups, but each student must turn in their own copy.
+		A student submitted the forllowing argument regarding the convergence of <m>\sum\limits_{n=1}^{\infty} \frac{-1}{n}</m>:
 	</p>
+	<assemblage>
+		<title>Student Solution</title>
+		<p>
+			Since <m>\frac{-1}{n} &lt; \frac{1}{n^2}</m> for all <m>n&gt;1</m> and <m>\sum\limits_{n=1}^{\infty} \frac{1}{n^2}</m> is a convergent <m>p</m>-series, we can conclude that <m>\sum\limits_{n=1}^{\infty}\frac{-1}{n}</m> converges by the Comparison Test.
+		</p>
+	</assemblage>
+	<ol>
+		<li>
+			<p>
+				(4 points) Is the conclusion of this argument correct? Justify your answer.
+			</p>
+		</li>
+		<li>
+			<p>
+				(4 points) Exactly what error was made by the student in attempting to apply the Comparison Test? What did they forget to check?
+			</p>
+		</li>
+	</ol>
 
+</exercise>
 
-	<p>
-		Consider the following student’s argument regarding the convergence of <m>\sum\limits_{n=1}^{\infty} \frac{-1}{n}</m>:<!-- linebreak -->Since <m>\frac{-1}{n} &lt; \frac{1}{n^2}</m> for all <m>n&gt;1</m> and <m>\sum\limits_{n=1}^{\infty} \frac{1}{n^2}</m> is a convergent <m>p</m>-series, we can conclude that <m>\sum\limits_{n=1}^{\infty}\frac{-1}{n}</m> converges by the Comparison Test.
+<exercise>
+		<p>
+			A student submitted the forllowing argument regarding the convergence of <m>\sum\limits_{n=1}^{\infty} \frac{1}{n^2}</m>:
 	</p>
+	<assemblage>
+		<title>Student Solution</title>
+		<p>
+			Observe that if <m>f(x) = \sin^2(\pi x) + \frac{1}{x^2}</m>, then we have <m>f(n) = \frac{1}{n^2}</m>. Observe that <m>f(x)</m> is a positive continuous function and the improper integral <me>\int_{1}^{\infty} \sin^{2}(\pi x) + \frac{1}{x^2} \,dx</me> diverges. Hence we can conclude that <m>\sum\limits_{n=1}^{\infty} \frac{1}{n^2}</m> diverges by the Integral Test.
+		</p>
+	</assemblage>
+	<ol>
+		<li>
+			<p>
+				(4 points) Is the conclusion of this argument correct? Justify your answer.
+			</p>
+		</li>
+		<li>
+			<p>
+				(4 points) Show the necessary work to show that the given integral diverges.
+			</p>
+		</li>
+		<li>
+			<p>
+				(4 points) Exactly what error was made by the student in attempting to apply the Integral Test? What did they forget to check?
+			</p>
+		</li>
+	</ol>
 
-	<p>
-		Consider the following student’s argument regarding the convergence of <m>\sum\limits_{n=1}^{\infty} \frac{1}{n^2}</m>:<!-- linebreak -->Observe that if <m>f(x) = \sin^2(\pi x) + \frac{1}{x^2}</m>, then we have <m>f(n) = \frac{1}{n^2}</m>. Observe that <m>f(x)</m> is a positive continuous function and the improper integral <me>\int_{1}^{\infty} \sin^{2}(\pi x) + \frac{1}{x^2} \,dx</me> diverges. Hence we can conclude that <m>\sum\limits_{n=1}^{\infty} \frac{1}{n^2}</m> diverges by the Integral Test.
-	</p>
+</exercise>	
 
+<exercise>
 	<p>
 		The main take away from the last two questions should be that you need to carefully check all the hypotheses of a convergence test in order to be sure its conclusion is correct. For each of the following series, carefully decide whether it converges or diverges, and if it converges, is the convergence absolute or conditional. By <q>carfully</q>, I mean you should do the following:
 	</p>
@@ -67,7 +127,8 @@
 			</p>
 		</li>
 
-	</ol></p><!--</div attr= class="questions">-->
+	</ol></p>
+</exercise>
 
 
 </worksheet>
