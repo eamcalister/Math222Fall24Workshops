@@ -37,7 +37,7 @@
 		<section xml:id="symbolic_integration">
 			<title>Symbolic Integration</title>
 			<p>
-				To do integrals and derivatives symbolically (i.e. to get a formulas), we use the Sympy package. The following is straightforward to use.
+				To do integrals and derivatives symbolically (i.e. to get a formulas), we use the Sympy package (Sympy is for symbolic calculations with Python). The following is straightforward to use.
 			</p>
 			<program language="python$">
 <input>
@@ -60,7 +60,7 @@ print(sp.diff(f,x))
 			<title>Numerical Methods</title>
 
 			<p>
-				In this section we give a Python script for a right-hand Riemann sum. You can find a Jupyter notebook on Canvas that has this, as well as a left-hand Riemann sum and the midpoint rule. Since we know the trapezoid rule and Simpson's rule are computed from these, that's all we'll code up right now. 
+				In this section we give a Python script for a right-hand Riemann sum using the Numpy package (Numpy is for numerical calculation vs. symbolic). You can find a Jupyter notebook on Canvas that has this, as well as a left-hand Riemann sum and the midpoint rule. Since we know the trapezoid rule and Simpson's rule are computed from these, that's all we'll code up right now. 
 			</p>
 
 			<p>
@@ -114,7 +114,7 @@ print(sp.diff(f,x))
 				</li>
 				<li>
 					<p>
-						(2 points) What does Matlab give you for an antiderivative of <m>\dfrac{x}{e^{x}-1}</m> (enter <c>exp(x)</c> for <m>e^{x}</m>)? Is it useful (to you)? 
+						(2 points) What does Python give you for an antiderivative of <m>\dfrac{x}{e^{x}-1}</m> (enter <c>sp.exp(x)</c> for <m>e^{x}</m>)? Is it useful (to you)? 
 					</p>
 				</li>
 			</ol> 
