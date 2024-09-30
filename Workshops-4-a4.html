@@ -91,6 +91,56 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#Workshops-3-3-1 { counter-set: Workshops-3-3-1 0; }
+#Workshops-3-3-1 > li::marker { content: "("counter(Workshops-3-3-1,lower-alpha)")"; }
+#Workshops-3-3-1 > li { counter-increment: Workshops-3-3-1; }
+#Workshops-3-4-5 { counter-set: Workshops-3-4-5 0; }
+#Workshops-3-4-5 > li::marker { content: "("counter(Workshops-3-4-5,lower-alpha)")"; }
+#Workshops-3-4-5 > li { counter-increment: Workshops-3-4-5; }
+#Workshops-3-5-3 { counter-set: Workshops-3-5-3 0; }
+#Workshops-3-5-3 > li::marker { content: "("counter(Workshops-3-5-3,lower-alpha)")"; }
+#Workshops-3-5-3 > li { counter-increment: Workshops-3-5-3; }
+#Workshops-3-7-3 { counter-set: Workshops-3-7-3 0; }
+#Workshops-3-7-3 > li::marker { content: "("counter(Workshops-3-7-3,lower-alpha)")"; }
+#Workshops-3-7-3 > li { counter-increment: Workshops-3-7-3; }
+#Workshops-4-3-1 { counter-set: Workshops-4-3-1 0; }
+#Workshops-4-3-1 > li::marker { content: "("counter(Workshops-4-3-1,lower-alpha)")"; }
+#Workshops-4-3-1 > li { counter-increment: Workshops-4-3-1; }
+#exercises-3-1 { counter-set: exercises-3-1 0; }
+#exercises-3-1 > li::marker { content: ""counter(exercises-3-1,decimal)"."; }
+#exercises-3-1 > li { counter-increment: exercises-3-1; }
+#exercises-4-1 { counter-set: exercises-4-1 0; }
+#exercises-4-1 > li::marker { content: ""counter(exercises-4-1,decimal)"."; }
+#exercises-4-1 > li { counter-increment: exercises-4-1; }
+#Workshops-5-3-1 { counter-set: Workshops-5-3-1 0; }
+#Workshops-5-3-1 > li::marker { content: "("counter(Workshops-5-3-1,lower-alpha)")"; }
+#Workshops-5-3-1 > li { counter-increment: Workshops-5-3-1; }
+#Workshops-5-4-2 { counter-set: Workshops-5-4-2 0; }
+#Workshops-5-4-2 > li::marker { content: "("counter(Workshops-5-4-2,lower-alpha)")"; }
+#Workshops-5-4-2 > li { counter-increment: Workshops-5-4-2; }
+#Workshops-5-5-2 { counter-set: Workshops-5-5-2 0; }
+#Workshops-5-5-2 > li::marker { content: "("counter(Workshops-5-5-2,lower-alpha)")"; }
+#Workshops-5-5-2 > li { counter-increment: Workshops-5-5-2; }
+#Workshops-6-3-1 { counter-set: Workshops-6-3-1 0; }
+#Workshops-6-3-1 > li::marker { content: "("counter(Workshops-6-3-1,lower-alpha)")"; }
+#Workshops-6-3-1 > li { counter-increment: Workshops-6-3-1; }
+#Workshops-6-4-3 { counter-set: Workshops-6-4-3 0; }
+#Workshops-6-4-3 > li::marker { content: "("counter(Workshops-6-4-3,lower-alpha)")"; }
+#Workshops-6-4-3 > li { counter-increment: Workshops-6-4-3; }
+#Workshops-6-5-3 { counter-set: Workshops-6-5-3 0; }
+#Workshops-6-5-3 > li::marker { content: "("counter(Workshops-6-5-3,lower-alpha)")"; }
+#Workshops-6-5-3 > li { counter-increment: Workshops-6-5-3; }
+#Workshops-6-6-3-1 { counter-set: Workshops-6-6-3-1 0; }
+#Workshops-6-6-3-1 > li::marker { content: "("counter(Workshops-6-6-3-1,lower-alpha)")"; }
+#Workshops-6-6-3-1 > li { counter-increment: Workshops-6-6-3-1; }
+#Workshops-7-7-1 { counter-set: Workshops-7-7-1 0; }
+#Workshops-7-7-1 > li::marker { content: "("counter(Workshops-7-7-1,lower-alpha)")"; }
+#Workshops-7-7-1 > li { counter-increment: Workshops-7-7-1; }
+#Workshops-7-8-2 { counter-set: Workshops-7-8-2 0; }
+#Workshops-7-8-2 > li::marker { content: "("counter(Workshops-7-8-2,lower-alpha)")"; }
+#Workshops-7-8-2 > li { counter-increment: Workshops-7-8-2; }
+</style>
 </head>
 <body id="changeme" class="pretext book ignore-math standalone worksheet a4">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -152,7 +202,7 @@ window.MathJax = {
 </h2>
 <div class="para" id="Workshops-4-2">In this workshop we will:</div>
 <article class="objectives goal-like" id="Workshops-4-3"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="Workshops-4-3-1">
 <li id="Workshops-4-3-1-1"><div class="para" id="Workshops-4-3-1-1-1">learn to input symbolic functions into Python in order to differentiate and integrate them symbolically,</div></li>
 <li id="Workshops-4-3-1-2"><div class="para" id="Workshops-4-3-1-2-1">use Python to apply our known numerical integration algorithms (with whatever number of subdivisions we choose) when necessary, and</div></li>
 <li id="Workshops-4-3-1-3"><div class="para" id="Workshops-4-3-1-3-1">use error bounds for each numerical method to determine a definite integral within a given accuracy when an elementary antiderivative does not exist.</div></li>
@@ -160,7 +210,7 @@ window.MathJax = {
 <section class="section" id="symbolic_integration"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="space"> </span><span class="title">Symbolic Integration</span>
 </h3>
-<div class="para" id="symbolic_integration-2">To do integrals and derivatives symbolically (i.e. to get a formulas), we use the Sympy package. The following is straightforward to use.</div>
+<div class="para" id="symbolic_integration-2">To do integrals and derivatives symbolically (i.e. to get a formulas), we use the Sympy package (Sympy is for symbolic calculations with Python). The following is straightforward to use.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">import sympy as sp
 
 #define your variable as a symbol
@@ -174,7 +224,7 @@ print(sp.diff(f,x))
 </code></pre></div></section><section class="section" id="numerical_methods"><h3 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="space"> </span><span class="title">Numerical Methods</span>
 </h3>
-<div class="para" id="numerical_methods-2">In this section we give a Python script for a right-hand Riemann sum. You can find a Jupyter notebook on Canvas that has this, as well as a left-hand Riemann sum and the midpoint rule. Since we know the trapezoid rule and Simpson’s rule are computed from these, that’s all we’ll code up right now.</div>
+<div class="para" id="numerical_methods-2">In this section we give a Python script for a right-hand Riemann sum using the Numpy package (Numpy is for numerical calculation vs. symbolic). You can find a Jupyter notebook on Canvas that has this, as well as a left-hand Riemann sum and the midpoint rule. Since we know the trapezoid rule and Simpson’s rule are computed from these, that’s all we’ll code up right now.</div>
 <div class="para" id="numerical_methods-3">The right-hand Riemann sum is below, with some further explanation for those who know some Python.</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="program"><code class="language-none">import numpy as np
 
@@ -212,11 +262,11 @@ print(right_hand_rule(f,a,b,n))
 </div>
 </div>
 <article class="exercise exercise-like" id="exercises-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<ol class="lower-alpha">
+<ol class="decimal" id="exercises-3-1">
 <li id="exercises-3-1-1"><div class="para" id="exercises-3-1-1-1">(2 points) Describe where you get stuck doing this integral by hand.</div></li>
-<li id="exercises-3-1-2"><div class="para" id="exercises-3-1-2-1">(2 points) What does Matlab give you for an antiderivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> (enter <code class="code-inline tex2jax_ignore">exp(x)</code> for <span class="process-math">\(e^{x}\)</span>)? Is it useful (to you)?</div></li>
+<li id="exercises-3-1-2"><div class="para" id="exercises-3-1-2-1">(2 points) What does Python give you for an antiderivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> (enter <code class="code-inline tex2jax_ignore">sp.exp(x)</code> for <span class="process-math">\(e^{x}\)</span>)? Is it useful (to you)?</div></li>
 </ol></article><article class="exercise exercise-like" id="exercises-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<ol class="lower-alpha">
+<ol class="decimal" id="exercises-4-1">
 <li id="exercises-4-1-1"><div class="para" id="exercises-4-1-1-1">(6 points)  Use a graph of the derivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> to help you find <span class="process-math">\(n\)</span> so that the LEFT and RIGHT approximation of this integral is within <span class="process-math">\(0.001\)</span> of the exact value. Find this approximation. Include a printout of the graph of the derivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> in your write-up.</div></li>
 <li id="exercises-4-1-2"><div class="para" id="exercises-4-1-2-1">(6 points) Using the <span class="process-math">\(n\)</span> you found in (2a), what do the other methods give as approximations. What is the maximum possible error for each method of approximation? Include any relevant graphs to show how you arrived at your error bounds.</div></li>
 <li id="exercises-4-1-3"><div class="para" id="exercises-4-1-3-1">(6 points) For each of MID, TRAP, and SIMP, how large must $n$ be to make the approximation within <span class="process-math">\(0.001\)</span> of the exact value of this integral? Be sure to explain your reasoning.</div></li>

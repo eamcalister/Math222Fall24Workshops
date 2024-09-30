@@ -91,6 +91,56 @@ window.MathJax = {
 <link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/colors_blue_red.css" rel="stylesheet" type="text/css">
 <link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#Workshops-3-3-1 { counter-set: Workshops-3-3-1 0; }
+#Workshops-3-3-1 > li::marker { content: "("counter(Workshops-3-3-1,lower-alpha)")"; }
+#Workshops-3-3-1 > li { counter-increment: Workshops-3-3-1; }
+#Workshops-3-4-5 { counter-set: Workshops-3-4-5 0; }
+#Workshops-3-4-5 > li::marker { content: "("counter(Workshops-3-4-5,lower-alpha)")"; }
+#Workshops-3-4-5 > li { counter-increment: Workshops-3-4-5; }
+#Workshops-3-5-3 { counter-set: Workshops-3-5-3 0; }
+#Workshops-3-5-3 > li::marker { content: "("counter(Workshops-3-5-3,lower-alpha)")"; }
+#Workshops-3-5-3 > li { counter-increment: Workshops-3-5-3; }
+#Workshops-3-7-3 { counter-set: Workshops-3-7-3 0; }
+#Workshops-3-7-3 > li::marker { content: "("counter(Workshops-3-7-3,lower-alpha)")"; }
+#Workshops-3-7-3 > li { counter-increment: Workshops-3-7-3; }
+#Workshops-4-3-1 { counter-set: Workshops-4-3-1 0; }
+#Workshops-4-3-1 > li::marker { content: "("counter(Workshops-4-3-1,lower-alpha)")"; }
+#Workshops-4-3-1 > li { counter-increment: Workshops-4-3-1; }
+#exercises-3-1 { counter-set: exercises-3-1 0; }
+#exercises-3-1 > li::marker { content: ""counter(exercises-3-1,decimal)"."; }
+#exercises-3-1 > li { counter-increment: exercises-3-1; }
+#exercises-4-1 { counter-set: exercises-4-1 0; }
+#exercises-4-1 > li::marker { content: ""counter(exercises-4-1,decimal)"."; }
+#exercises-4-1 > li { counter-increment: exercises-4-1; }
+#Workshops-5-3-1 { counter-set: Workshops-5-3-1 0; }
+#Workshops-5-3-1 > li::marker { content: "("counter(Workshops-5-3-1,lower-alpha)")"; }
+#Workshops-5-3-1 > li { counter-increment: Workshops-5-3-1; }
+#Workshops-5-4-2 { counter-set: Workshops-5-4-2 0; }
+#Workshops-5-4-2 > li::marker { content: "("counter(Workshops-5-4-2,lower-alpha)")"; }
+#Workshops-5-4-2 > li { counter-increment: Workshops-5-4-2; }
+#Workshops-5-5-2 { counter-set: Workshops-5-5-2 0; }
+#Workshops-5-5-2 > li::marker { content: "("counter(Workshops-5-5-2,lower-alpha)")"; }
+#Workshops-5-5-2 > li { counter-increment: Workshops-5-5-2; }
+#Workshops-6-3-1 { counter-set: Workshops-6-3-1 0; }
+#Workshops-6-3-1 > li::marker { content: "("counter(Workshops-6-3-1,lower-alpha)")"; }
+#Workshops-6-3-1 > li { counter-increment: Workshops-6-3-1; }
+#Workshops-6-4-3 { counter-set: Workshops-6-4-3 0; }
+#Workshops-6-4-3 > li::marker { content: "("counter(Workshops-6-4-3,lower-alpha)")"; }
+#Workshops-6-4-3 > li { counter-increment: Workshops-6-4-3; }
+#Workshops-6-5-3 { counter-set: Workshops-6-5-3 0; }
+#Workshops-6-5-3 > li::marker { content: "("counter(Workshops-6-5-3,lower-alpha)")"; }
+#Workshops-6-5-3 > li { counter-increment: Workshops-6-5-3; }
+#Workshops-6-6-3-1 { counter-set: Workshops-6-6-3-1 0; }
+#Workshops-6-6-3-1 > li::marker { content: "("counter(Workshops-6-6-3-1,lower-alpha)")"; }
+#Workshops-6-6-3-1 > li { counter-increment: Workshops-6-6-3-1; }
+#Workshops-7-7-1 { counter-set: Workshops-7-7-1 0; }
+#Workshops-7-7-1 > li::marker { content: "("counter(Workshops-7-7-1,lower-alpha)")"; }
+#Workshops-7-7-1 > li { counter-increment: Workshops-7-7-1; }
+#Workshops-7-8-2 { counter-set: Workshops-7-8-2 0; }
+#Workshops-7-8-2 > li::marker { content: "("counter(Workshops-7-8-2,lower-alpha)")"; }
+#Workshops-7-8-2 > li { counter-increment: Workshops-7-8-2; }
+</style>
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
@@ -151,7 +201,7 @@ window.MathJax = {
 </h2>
 <div class="para" id="Workshops-3-2">Energy is work! In this workshop we will:</div>
 <article class="objectives goal-like" id="Workshops-3-3"><h3 class="heading"><span class="type">Objectives</span></h3>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="Workshops-3-3-1">
 <li id="Workshops-3-3-1-1"><div class="para" id="Workshops-3-3-1-1-1">derive the formula for the kinetic energy of an object of mass <span class="process-math">\(m\)</span> traveling with velocity <span class="process-math">\(V\text{,}\)</span>
 </div></li>
 <li id="Workshops-3-3-1-2"><div class="para" id="Workshops-3-3-1-2-1">apply this formula and integration to find the kinetic energy of a spinning object, and</div></li>
@@ -160,7 +210,7 @@ window.MathJax = {
 <span class="codenumber">1<span class="period">.</span></span><span class="space"> </span><span class="title">The formula for kinetic energy.</span>
 </h3>
 <div class="para" id="Workshops-3-4-2">First, we will establish the following notation for this problem:</div>
-<ul class="disc">
+<ul class="disc" id="Workshops-3-4-3">
 <li id="Workshops-3-4-3-1"><div class="para" id="Workshops-3-4-3-1-1">Velocity = <span class="process-math">\(v(t)\)</span> = The rate of change in position.</div></li>
 <li id="Workshops-3-4-3-2"><div class="para" id="Workshops-3-4-3-2-1">Acceleration = <span class="process-math">\(a(t) = v^{\prime}(t)\)</span> = the rate of change in velocity.</div></li>
 <li id="Workshops-3-4-3-3"><div class="para" id="Workshops-3-4-3-3-1">Force equals mass<span class="process-math">\(\times\)</span>acceleration <span class="process-math">\(F = ma = mv^{\prime}\)</span>
@@ -177,7 +227,7 @@ window.MathJax = {
 </div>
 <div class="para">where the velocity <span class="process-math">\(V\)</span> is reached after <span class="process-math">\(T\)</span> seconds.</div>
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="Workshops-3-4-5">
 <li id="Workshops-3-4-5-1"><div class="para" id="Workshops-3-4-5-1-1">(3 points) Explain how the integral given above gives the work done in accelerating an object of mass <span class="process-math">\(m\)</span> to a velocity <span class="process-math">\(V\text{.}\)</span>
 </div></li>
 <li id="Workshops-3-4-5-2"><div class="para" id="Workshops-3-4-5-2-1">(5 points) Evaluate the integral given above to compute the work done in accelerating an object of mass <span class="process-math">\(m\)</span> from rest (when <span class="process-math">\(t = 0\)</span>) to a velocity <span class="process-math">\(V\)</span> when <span class="process-math">\(t = T\)</span> to get the formula for the kinetic energy of an object of mass <span class="process-math">\(m\)</span> and velocity <span class="process-math">\(V\text{.}\)</span> <em class="emphasis">Hint:</em> Use a standard integration technique.</div></li>
@@ -186,7 +236,7 @@ window.MathJax = {
 </h3>
 <div class="para" id="Workshops-3-5-2">In order to find the kinetic energy of a spinning sphere (in the next problem), we first need to find the kinetic energy in a spinning disk. Suppose this disk has a radius of <span class="process-math">\(x\)</span> meters, a thickness <span class="process-math">\(\Delta h\text{,}\)</span> uniform density <span class="process-math">\(\delta\)</span> kg/m<span class="process-math">\(^3\text{,}\)</span> and is spinning at a rate of <span class="process-math">\(\omega\)</span> radians/s around an axis through its center perpendicular to the disk. To find its total kinetic energy, we slice it into rings of radius <span class="process-math">\(r\)</span> and width <span class="process-math">\(\Delta r\text{.}\)</span>
 </div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="Workshops-3-5-3">
 <li id="Workshops-3-5-3-1"><div class="para" id="Workshops-3-5-3-1-1">(4 points) Find the mass, in kg, and velocity, in m/s, of each ring. Use this and the formula you derived in problem 1 to find the kinetic energy of a ring.</div></li>
 <li id="Workshops-3-5-3-2"><div class="para" id="Workshops-3-5-3-2-1">(4 points) Use an integral to find the total kinetic energy of the disk.</div></li>
 </ol></article><article class="exercise exercise-like" id="Workshops-3-6"><h3 class="heading">
@@ -196,7 +246,7 @@ window.MathJax = {
 <span class="codenumber">4<span class="period">.</span></span><span class="space"> </span><span class="title">Baseball.</span>
 </h3>
 <div class="para" id="Workshops-3-7-2">In the 2016 Major League season, the fastest pitch thrown was a 105.1 mph fastball by Aroldis Chapman. The spin rate on that pitch was 2617 rpm.</div>
-<ol class="lower-alpha">
+<ol class="lower-alpha" id="Workshops-3-7-3">
 <li id="Workshops-3-7-3-1"><div class="para" id="Workshops-3-7-3-1-1">(3 points) Assuming a baseball is of uniform density (it isn’t), what was the total kinetic energy of Chapman’s pitch? (You will need to find out the size and mass of a baseball for this, and convert some units.)</div></li>
 <li id="Workshops-3-7-3-2"><div class="para" id="Workshops-3-7-3-2-1">(3 points) The highest recorded spin rate in the 2016 season was 3498 rpm on an 80 mph curveball by Seth Lugo. Did Lugo’s spin rate make his pitch comparable to Chapman’s in terms of kinetic energy?</div></li>
 </ol></article><article class="exercise exercise-like" id="Workshops-3-8"><h3 class="heading">
