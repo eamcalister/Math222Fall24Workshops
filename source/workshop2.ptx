@@ -60,7 +60,7 @@ print(sp.diff(f,x))
 			<title>Numerical Methods</title>
 
 			<p>
-				In this section we give a Python script for a right-hand Riemann sum using the Numpy package (Numpy is for numerical calculation vs. symbolic). You can find a Jupyter notebook on Canvas that has this, as well as a left-hand Riemann sum and the midpoint rule. Since we know the trapezoid rule and Simpson's rule are computed from these, that's all we'll code up right now. 
+				In this section we give a Python script for a right-hand Riemann sum using the Numpy package (Numpy is for numerical calculation vs. symbolic). You can find a Python script on Canvas that has this, as well as a left-hand Riemann sum and the midpoint rule. Since we know the trapezoid rule and Simpson's rule are computed from these, that's all we'll code up right now. 
 			</p>
 
 			<p>
@@ -94,6 +94,157 @@ print(sp.diff(f,x))
 					print(right_hand_rule(f,a,b,n))	
 				</input>
 			</program>
+		<p>
+			In order for numerical integration rules (RIGHT, LEFT, MID, TRAP, and SIMP) to really be useful in real-world situations, we need to answer the following related questions:
+			<ul>
+				<li>
+					<p>
+						For a given function, on a given interval, using one of the rules, how much does the error decrease as we increase <m>n</m> and how large will <m>n</m> need to be to make the error as small as we want?
+					</p>
+				</li>
+				<li>
+					<p>
+						How much better are the ``better'' rules than ones that are easier to compute?
+					</p>
+				</li>
+			</ul>
+		</p>
+
+		<p>
+			To begin answering these, fill in the following blanks using your understanding of RIGHT, LEFT, MID, and TRAP. Be sure you can explain each answer using a picture.
+		</p>
+
+		<assemblage>
+			<title>Relation of Methods to Derivatives</title>
+			<p>
+				<ul>
+					<li>
+						<p>
+							If <m>f'\gt 0</m> on <m>[a,b]</m>, then
+							<me>
+							\text{LEFT}(n)\leq \int_a^b f(x)\,dx \leq \text{RIGHT}(n).
+							</me>
+						</p>
+					</li>
+					<li>
+						<p>
+							If <m>f'\lt 0</m> on <m>[a,b]</m>, then
+							<me>
+							\text{RIGHT}(n)\leq \int_a^b f(x)\,dx \leq \text{LEFT}(n).
+							</me>
+						</p>
+					</li>
+					<li>
+						<p>
+							If <m>f''\gt 0</m> on <m>[a,b]</m>, then
+							<me>
+							\text{MID}(n)\leq \int_a^b f(x)\,dx \leq \text{TRAP}(n).
+							</me>
+						</p>
+					</li>
+					<li>
+						<p>
+							If <m>f''\lt 0</m> on <m>[a,b]</m>, then
+							<me>
+							\text{TRAP}(n)\leq \int_a^b f(x)\,dx \leq \text{LEFT}(n).
+							</me>
+						</p>
+					</li>
+				</ul>
+			</p>
+		</assemblage>
+		
+		<p>
+			So we see that error in LEFT and RIGHT depends somehow on the first derivative, while the error in MID and TRAP depends somehow on the second. The following list of numerical error bounds can be derived using material from section 10.4 of the text and/or integration by parts. However, it would be fairly time consuming to derive them, so we will instead focus on their use.
+		</p>
+		
+		<assemblage>
+			<title>Error Bounds for Numerical Integration Methods</title>
+			<p>
+				<ul>
+					<li><title>Left and Right Error Bounds</title>
+						<p>
+							If <m>|f'(x)|\leq M</m> for all <m>a\leq x\leq b</m>, then
+							<me>
+							\left|\mbox{LEFT}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^2}{2n}
+							</me>
+							and 
+							<me>
+							\left|\mbox{RIGHT}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^2}{2n}.
+							</me>
+						</p>
+					</li>
+					<li><title>Trap and Mid Error Bounds</title>
+						<p>
+							If <m>|f''(x)|\leq M</m> for all <m>a\leq x\leq b</m>, then
+							<me>
+							\left|\mbox{TRAP}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^3}{12n^2}
+							</me>
+							and 
+							<me>
+							\left|\mbox{MID}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^3}{24n^3}.
+							</me>
+						</p>
+					</li>
+					<li><title>Simpson's Rule Bound</title>
+						<p>
+							If <m>|f^(4)(x)|\leq M</m> for all <m>a\leq x\leq b</m>, then
+							<me>
+							\left|\mbox{SIMP}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^5}{2880n^4}
+							</me>
+						</p>
+					</li>
+				</ul>
+			</p>
+		</assemblage>
+
+		<example><title>Using the Error Bound Formulas</title>
+			<p>
+			Suppose we want to numerically integrate <m>f(x) = e^x</m> from <m>x=0</m> to <m>x=1</m>. We know the exact answer is <m>\int_0^1 e^x dx = e-1</m>. However, maybe we don't know the exact value of <m>e</m> (we know it's less than <m>3</m>, but not much else), that may not be useful. Let's use <m>n=2</m> rectangles and estimate the error for each method. To do this we must:
+			<ol>
+				<li>
+					<p>
+						Find the upper bound on the appropriate derivative for <m>f(x)</m>. Since the derivative of <m>e^x</m> is <m>e^x</m>, we can say <m>f^(n)(x)\leq 3</m> when <m>0\leq x\leq 1</m>. That is, <m>M = 3</m> for all the methods.
+					</p>
+				</li>
+				<li>
+					<p>
+						Now plug into each formula to estimate possible errors with <m>n=2</m>.
+					</p>
+				</li>
+			</ol>  
+		</p>
+		<p>
+			We get the following:
+			<me>
+				\left|\mbox{LEFT}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^2}{2\cdot 2} = \frac{3}{4}
+			</me>
+			<me>
+				\left|\mbox{RIGHT}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^2}{2\cdot 2} = \frac{3}{4}
+			</me>
+			<me>
+				\left|\mbox{TRAP}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^3}{12\cdot 2^2} = \frac{3}{48}
+			</me>
+			<me>
+				\left|\mbox{MID}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^3}{24\cdot 2^2} = \frac{3}{96}
+			</me>
+			<me>
+				\left|\mbox{SIMP}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^5}{2880\cdot 2^4} = \frac{3}{46080}
+			</me>
+		</p>
+		<p>
+			This means the error using Simpson's Rule with just two rectangles will be less than or equal to <m>0.0000652</m>. If we apply Simpson's rule to this integral with <m>n=2</m>, we get
+			<me>
+				\int_0^1 e^x dx \approx \text{SIMP}(n) = 1.7183188419217472
+			</me>
+			The value of <m>e-1</m> given by a calculator is <m>1.718281828</m>. The actual error turns out to be about <m>0.000037</m>, which is less than the bound.
+		</p>
+		If we wanted to know how big <m>n</m> needs to be to get <m>\text{TRAP}(n)</m> to be within <m>6\cdot 10^{-5}</m> of the exact value, we would solve 
+		<me>
+			\frac{3(1-0)^3}{12n^2} \lt 0.00006
+		</me>
+		and get <m>n \gt \sqrt{\frac{10^6}{24}}</m>. This rounds up to <m>65</m>. So, if <m>n\geq 65</m>, <m>\text{TRAP}(n)</m> will give as good an estimate as <m>\text{SIMP}(2)</m>. 
+		</example>
 
 		</section>
 
