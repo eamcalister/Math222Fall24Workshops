@@ -111,10 +111,10 @@ window.MathJax = {
 #numerical_methods-10-2-8 > li::marker { content: ""counter(numerical_methods-10-2-8,decimal)"."; }
 #numerical_methods-10-2-8 > li { counter-increment: numerical_methods-10-2-8; }
 #exercises-3-1 { counter-set: exercises-3-1 0; }
-#exercises-3-1 > li::marker { content: ""counter(exercises-3-1,decimal)"."; }
+#exercises-3-1 > li::marker { content: "("counter(exercises-3-1,lower-alpha)")"; }
 #exercises-3-1 > li { counter-increment: exercises-3-1; }
 #exercises-4-1 { counter-set: exercises-4-1 0; }
-#exercises-4-1 > li::marker { content: ""counter(exercises-4-1,decimal)"."; }
+#exercises-4-1 > li::marker { content: "("counter(exercises-4-1,lower-alpha)")"; }
 #exercises-4-1 > li { counter-increment: exercises-4-1; }
 #Workshops-5-3-1 { counter-set: Workshops-5-3-1 0; }
 #Workshops-5-3-1 > li::marker { content: "("counter(Workshops-5-3-1,lower-alpha)")"; }
@@ -325,7 +325,7 @@ print(right_hand_rule(f,a,b,n))
 <div class="para">and</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\left|\mbox{MID}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^3}{24n^3}.
+\left|\mbox{MID}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^3}{24n^2}.
 \end{equation*}
 </div>
 </div>
@@ -400,11 +400,11 @@ print(right_hand_rule(f,a,b,n))
 </div>
 </div>
 <article class="exercise exercise-like" id="exercises-3"><h4 class="heading"><span class="codenumber">1<span class="period">.</span></span></h4>
-<ol class="decimal" id="exercises-3-1">
+<ol class="lower-alpha" id="exercises-3-1">
 <li id="exercises-3-1-1"><div class="para" id="exercises-3-1-1-1">(2 points) Describe where you get stuck doing this integral by hand.</div></li>
 <li id="exercises-3-1-2"><div class="para" id="exercises-3-1-2-1">(2 points) What does Python give you for an antiderivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> (enter <code class="code-inline tex2jax_ignore">sp.exp(x)</code> for <span class="process-math">\(e^{x}\)</span>)? Is it useful (to you)?</div></li>
 </ol></article><article class="exercise exercise-like" id="exercises-4"><h4 class="heading"><span class="codenumber">2<span class="period">.</span></span></h4>
-<ol class="decimal" id="exercises-4-1">
+<ol class="lower-alpha" id="exercises-4-1">
 <li id="exercises-4-1-1"><div class="para" id="exercises-4-1-1-1">(6 points)  Use a graph of the derivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> to help you find <span class="process-math">\(n\)</span> so that the LEFT and RIGHT approximation of this integral is within <span class="process-math">\(0.001\)</span> of the exact value. Find this approximation. Include a printout of the graph of the derivative of <span class="process-math">\(\dfrac{x}{e^{x}-1}\)</span> in your write-up.</div></li>
 <li id="exercises-4-1-2"><div class="para" id="exercises-4-1-2-1">(6 points) Using the <span class="process-math">\(n\)</span> you found in (2a), what do the other methods give as approximations. What is the maximum possible error for each method of approximation? Include any relevant graphs to show how you arrived at your error bounds.</div></li>
 <li id="exercises-4-1-3"><div class="para" id="exercises-4-1-3-1">(6 points) For each of MID, TRAP, and SIMP, how large must <span class="process-math">\(n\)</span> be to make the approximation within <span class="process-math">\(0.001\)</span> of the exact value of this integral? Be sure to explain your reasoning.</div></li>
