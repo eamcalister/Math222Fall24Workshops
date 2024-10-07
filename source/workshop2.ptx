@@ -188,7 +188,7 @@ print(sp.diff(f,x))
 					</li>
 					<li><title>Simpson's Rule Bound</title>
 						<p>
-							If <m>|f^(4)(x)|\leq M</m> for all <m>a\leq x\leq b</m>, then
+							If <m>|f^{(4)}(x)|\leq M</m> for all <m>a\leq x\leq b</m>, then
 							<me>
 							\left|\mbox{SIMP}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^5}{2880n^4}
 							</me>
@@ -204,7 +204,7 @@ print(sp.diff(f,x))
 			<ol>
 				<li>
 					<p>
-						Find the upper bound on the appropriate derivative for <m>f(x)</m>. Since the derivative of <m>e^x</m> is <m>e^x</m>, we can say <m>f^(n)(x)\leq 3</m> when <m>0\leq x\leq 1</m>. That is, <m>M = 3</m> for all the methods.
+						Find the upper bound on the appropriate derivative for <m>f(x)</m>. Since the derivative of <m>e^x</m> is <m>e^x</m>, we can say <m>f^{(n)}(x)\leq 3</m> when <m>0\leq x\leq 1</m>. That is, <m>M = 3</m> for all the methods.
 					</p>
 				</li>
 				<li>
