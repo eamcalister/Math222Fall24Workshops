@@ -182,7 +182,7 @@ print(sp.diff(f,x))
 							</me>
 							and 
 							<me>
-							\left|\mbox{MID}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^3}{24n^3}.
+							\left|\mbox{MID}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^3}{24n^2}.
 							</me>
 						</p>
 					</li>
@@ -257,7 +257,8 @@ print(sp.diff(f,x))
 			</p>
 	
 			<exercise>
-			<ol>
+				
+			<ol marker = "(a)">
 				<li>
 					<p>
 						(2 points) Describe where you get stuck doing this integral by hand.
@@ -269,10 +270,11 @@ print(sp.diff(f,x))
 					</p>
 				</li>
 			</ol> 
+		
 			</exercise>
 			
 			<exercise>
-			<ol>
+			<ol marker = "(a)">
 				<li>
 					<p>
 						(6 points)  Use a graph of the derivative of <m>\dfrac{x}{e^{x}-1}</m> to help you find <m>n</m> so that the LEFT and RIGHT approximation of this integral is within <m>0.001</m> of the exact value. Find this approximation. Include a printout of the graph of the derivative of <m>\dfrac{x}{e^{x}-1}</m> in your write-up.
