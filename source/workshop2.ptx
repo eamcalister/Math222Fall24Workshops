@@ -285,7 +285,7 @@ print(sp.diff(f,x))
 				</li>
 				<li>
 					<p>
-						(6 points) For each of MID, TRAP, and SIMP, how large must $n$ be to make the approximation within <m>0.001</m> of the exact value of this integral? Be sure to explain your reasoning.
+						(6 points) For each of MID, TRAP, and SIMP, how large must <m>n</m> be to make the approximation within <m>0.001</m> of the exact value of this integral? Be sure to explain your reasoning.
 					</p>
 				</li>
 			</ol>
