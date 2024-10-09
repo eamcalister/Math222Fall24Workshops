@@ -190,7 +190,7 @@ print(sp.diff(f,x))
 						<p>
 							If <m>|f^{(4)}(x)|\leq M</m> for all <m>a\leq x\leq b</m>, then
 							<me>
-							\left|\mbox{SIMP}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^5}{2880n^4}
+							\left|\mbox{SIMP}(n) - \int_a^{b} f(x)\, dx\right| \leq \frac{M(b-a)^5}{180n^4}
 							</me>
 						</p>
 					</li>
@@ -229,11 +229,11 @@ print(sp.diff(f,x))
 				\left|\mbox{MID}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^3}{24\cdot 2^2} = \frac{3}{96}
 			</me>
 			<me>
-				\left|\mbox{SIMP}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^5}{2880\cdot 2^4} = \frac{3}{46080}
+				\left|\mbox{SIMP}(n) - \int_0^{1} e^x\, dx\right| \leq \frac{3(1-0)^5}{180\cdot 2^4} = \frac{3}{2880}
 			</me>
 		</p>
 		<p>
-			This means the error using Simpson's Rule with just two rectangles will be less than or equal to <m>0.0000652</m>. If we apply Simpson's rule to this integral with <m>n=2</m>, we get
+			This means the error using Simpson's Rule with just two rectangles will be less than or equal to <m>0.001042</m>. If we apply Simpson's rule to this integral with <m>n=2</m>, we get
 			<me>
 				\int_0^1 e^x dx \approx \text{SIMP}(n) = 1.7183188419217472
 			</me>
