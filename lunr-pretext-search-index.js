@@ -178,7 +178,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "1.4",
   "title": "Being Careful with Series",
-  "body": "Being Careful with Series  In this workshop we will:     analyze proposed answers to series convergence questions which may have forgotten to check a hypothsis of a convergence test and    carefully (showing all work) answer several convergence questions for assessment purposes.     A student submitted the forllowing argument regarding the convergence of :  Student Solution  Since for all and is a convergent -series, we can conclude that converges by the Comparison Test.    (4 points) Is the conclusion of this argument correct? Justify your answer.    (4 points) Exactly what error was made by the student in attempting to apply the Comparison Test? What did they forget to check?    A student submitted the forllowing argument regarding the convergence of :  Student Solution  Observe that if , then we have . Observe that is a positive continuous function and the improper integral diverges. Hence we can conclude that diverges by the Integral Test.    (4 points) Is the conclusion of this argument correct? Justify your answer.    (4 points) Show the necessary work to show that the given integral diverges.    (4 points) Exactly what error was made by the student in attempting to apply the Integral Test? What did they forget to check?    The main take away from the last two questions should be that you need to carefully check all the hypotheses of a convergence test in order to be sure its conclusion is correct. For each of the following series, carefully decide whether it converges or diverges, and if it converges, is the convergence absolute or conditional. By carfully , I mean you should do the following:   State which test you will use and say why.    Show all the hypotheses of the test are satisfied.    Perform any calculations necessary and give your conclusion.                     Hint: For near zero, .    "
+  "body": "Being Careful with Series  In this workshop we will:     analyze instances where applying a convergence test incorrectly (but just barely) can lead to erroneous results    carefully (showing all work) answer several convergence questions for assessment purposes.     A student submitted the forllowing argument regarding the convergence of :  Student Solution  Since for all and is a convergent -series, we can conclude that converges by the Comparison Test.    (3 points) Is the conclusion of this argument correct? Justify your answer.    (2 points) Exactly what error was made by the student in attempting to apply the Comparison Test? What did they forget to check?     Consider the series below:    (2 points) Briefly explain why this series can be written using sigma notation as     (4 points) Show, by writing out some terms that this series can also be written as     (6 points) By combining the two fractions in the representation of this series in (b), and then using the Limit Comparison Test (with all hypotheses show (graph to show positivity)), show that this series diverges.    (3 points) Explain why this series demonstrates that you must check all hypotheses of the Alternating Series Test for its conclusion to be correct.     (4 points each) The main take away from the last two questions should be that you need to carefully check all the hypotheses of a convergence test in order to be sure its conclusion is correct. For each of the following series, carefully decide whether it converges or diverges, and if it converges, is the convergence absolute or conditional. By carefully , I mean you should do the following:   State which test you will use and say why.    Show all the hypotheses of the test are satisfied.    Perform any calculations necessary and give your conclusion.                     "
 },
 {
   "id": "Workshops-6-3",
@@ -187,7 +187,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "1.4",
   "title": "",
-  "body": "   analyze proposed answers to series convergence questions which may have forgotten to check a hypothsis of a convergence test and    carefully (showing all work) answer several convergence questions for assessment purposes.    "
+  "body": "   analyze instances where applying a convergence test incorrectly (but just barely) can lead to erroneous results    carefully (showing all work) answer several convergence questions for assessment purposes.    "
 },
 {
   "id": "Workshops-6-4",
@@ -196,7 +196,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "1.4.1",
   "title": "",
-  "body": "A student submitted the forllowing argument regarding the convergence of :  Student Solution  Since for all and is a convergent -series, we can conclude that converges by the Comparison Test.    (4 points) Is the conclusion of this argument correct? Justify your answer.    (4 points) Exactly what error was made by the student in attempting to apply the Comparison Test? What did they forget to check?   "
+  "body": "A student submitted the forllowing argument regarding the convergence of :  Student Solution  Since for all and is a convergent -series, we can conclude that converges by the Comparison Test.    (3 points) Is the conclusion of this argument correct? Justify your answer.    (2 points) Exactly what error was made by the student in attempting to apply the Comparison Test? What did they forget to check?   "
 },
 {
   "id": "Workshops-6-5",
@@ -205,7 +205,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "1.4.2",
   "title": "",
-  "body": "A student submitted the forllowing argument regarding the convergence of :  Student Solution  Observe that if , then we have . Observe that is a positive continuous function and the improper integral diverges. Hence we can conclude that diverges by the Integral Test.    (4 points) Is the conclusion of this argument correct? Justify your answer.    (4 points) Show the necessary work to show that the given integral diverges.    (4 points) Exactly what error was made by the student in attempting to apply the Integral Test? What did they forget to check?   "
+  "body": "Consider the series below:    (2 points) Briefly explain why this series can be written using sigma notation as     (4 points) Show, by writing out some terms that this series can also be written as     (6 points) By combining the two fractions in the representation of this series in (b), and then using the Limit Comparison Test (with all hypotheses show (graph to show positivity)), show that this series diverges.    (3 points) Explain why this series demonstrates that you must check all hypotheses of the Alternating Series Test for its conclusion to be correct.    "
 },
 {
   "id": "Workshops-6-6",
@@ -214,7 +214,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet Exercise",
   "number": "1.4.3",
   "title": "",
-  "body": "The main take away from the last two questions should be that you need to carefully check all the hypotheses of a convergence test in order to be sure its conclusion is correct. For each of the following series, carefully decide whether it converges or diverges, and if it converges, is the convergence absolute or conditional. By carfully , I mean you should do the following:   State which test you will use and say why.    Show all the hypotheses of the test are satisfied.    Perform any calculations necessary and give your conclusion.                     Hint: For near zero, .   "
+  "body": "(4 points each) The main take away from the last two questions should be that you need to carefully check all the hypotheses of a convergence test in order to be sure its conclusion is correct. For each of the following series, carefully decide whether it converges or diverges, and if it converges, is the convergence absolute or conditional. By carefully , I mean you should do the following:   State which test you will use and say why.    Show all the hypotheses of the test are satisfied.    Perform any calculations necessary and give your conclusion.                    "
 },
 {
   "id": "Workshops-7",

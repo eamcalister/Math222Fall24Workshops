@@ -131,9 +131,9 @@ window.MathJax = {
 #Workshops-6-4-3 { counter-set: Workshops-6-4-3 0; }
 #Workshops-6-4-3 > li::marker { content: "("counter(Workshops-6-4-3,lower-alpha)")"; }
 #Workshops-6-4-3 > li { counter-increment: Workshops-6-4-3; }
-#Workshops-6-5-3 { counter-set: Workshops-6-5-3 0; }
-#Workshops-6-5-3 > li::marker { content: "("counter(Workshops-6-5-3,lower-alpha)")"; }
-#Workshops-6-5-3 > li { counter-increment: Workshops-6-5-3; }
+#Workshops-6-5-1-2 { counter-set: Workshops-6-5-1-2 0; }
+#Workshops-6-5-1-2 > li::marker { content: "("counter(Workshops-6-5-1-2,lower-alpha)")"; }
+#Workshops-6-5-1-2 > li { counter-increment: Workshops-6-5-1-2; }
 #Workshops-6-6-3-1 { counter-set: Workshops-6-6-3-1 0; }
 #Workshops-6-6-3-1 > li::marker { content: "("counter(Workshops-6-6-3-1,lower-alpha)")"; }
 #Workshops-6-6-3-1 > li { counter-increment: Workshops-6-6-3-1; }
@@ -206,33 +206,45 @@ window.MathJax = {
 <div class="para" id="Workshops-6-2">In this workshop we will:</div>
 <article class="objectives goal-like" id="Workshops-6-3"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ol class="lower-alpha" id="Workshops-6-3-1">
-<li id="Workshops-6-3-1-1"><div class="para" id="Workshops-6-3-1-1-1">analyze proposed answers to series convergence questions which may have forgotten to check a hypothsis of a convergence test and</div></li>
+<li id="Workshops-6-3-1-1"><div class="para" id="Workshops-6-3-1-1-1">analyze instances where applying a convergence test incorrectly (but just barely) can lead to erroneous results</div></li>
 <li id="Workshops-6-3-1-2"><div class="para" id="Workshops-6-3-1-2-1">carefully (showing <em class="emphasis">all</em> work) answer several convergence questions for assessment purposes.</div></li>
 </ol></article><article class="exercise exercise-like" id="Workshops-6-4"><h3 class="heading"><span class="codenumber">1<span class="period">.</span></span></h3>
 <div class="para" id="Workshops-6-4-1">A student submitted the forllowing argument regarding the convergence of <span class="process-math">\(\sum\limits_{n=1}^{\infty} \frac{-1}{n}\text{:}\)</span>
 </div>
 <article class="assemblage assemblage-like" id="Workshops-6-4-2"><h4 class="heading"><span class="title">Student Solution.</span></h4>
 <div class="para" id="Workshops-6-4-2-2">Since <span class="process-math">\(\frac{-1}{n} &lt; \frac{1}{n^2}\)</span> for all <span class="process-math">\(n&gt;1\)</span> and <span class="process-math">\(\sum\limits_{n=1}^{\infty} \frac{1}{n^2}\)</span> is a convergent <span class="process-math">\(p\)</span>-series, we can conclude that <span class="process-math">\(\sum\limits_{n=1}^{\infty}\frac{-1}{n}\)</span> converges by the Comparison Test.</div></article><ol class="lower-alpha" id="Workshops-6-4-3">
-<li id="Workshops-6-4-3-1"><div class="para" id="Workshops-6-4-3-1-1">(4 points) Is the conclusion of this argument correct? Justify your answer.</div></li>
-<li id="Workshops-6-4-3-2"><div class="para" id="Workshops-6-4-3-2-1">(4 points) Exactly what error was made by the student in attempting to apply the Comparison Test? What did they forget to check?</div></li>
+<li id="Workshops-6-4-3-1"><div class="para" id="Workshops-6-4-3-1-1">(3 points) Is the conclusion of this argument correct? Justify your answer.</div></li>
+<li id="Workshops-6-4-3-2"><div class="para" id="Workshops-6-4-3-2-1">(2 points) Exactly what error was made by the student in attempting to apply the Comparison Test? What did they forget to check?</div></li>
 </ol></article><article class="exercise exercise-like" id="Workshops-6-5"><h3 class="heading"><span class="codenumber">2<span class="period">.</span></span></h3>
-<div class="para" id="Workshops-6-5-1">A student submitted the forllowing argument regarding the convergence of <span class="process-math">\(\sum\limits_{n=1}^{\infty} \frac{1}{n^2}\text{:}\)</span>
-</div>
-<article class="assemblage assemblage-like" id="Workshops-6-5-2"><h4 class="heading"><span class="title">Student Solution.</span></h4>
-<div class="para logical" id="Workshops-6-5-2-2">
-<div class="para">Observe that if <span class="process-math">\(f(x) = \sin^2(\pi x) + \frac{1}{x^2}\text{,}\)</span> then we have <span class="process-math">\(f(n) = \frac{1}{n^2}\text{.}\)</span> Observe that <span class="process-math">\(f(x)\)</span> is a positive continuous function and the improper integral</div>
+<div class="para logical" id="Workshops-6-5-1">
+<div class="para">Consider the series below:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\int_{1}^{\infty} \sin^{2}(\pi x) + \frac{1}{x^2} \,dx
+1-\frac{1}{4}+\frac{1}{3} - \frac{1}{16} + \frac{1}{5} -\frac{1}{36} + \frac{1}{7} - \cdots
 \end{equation*}
 </div>
-<div class="para">diverges. Hence we can conclude that <span class="process-math">\(\sum\limits_{n=1}^{\infty} \frac{1}{n^2}\)</span> diverges by the Integral Test.</div>
-</div></article><ol class="lower-alpha" id="Workshops-6-5-3">
-<li id="Workshops-6-5-3-1"><div class="para" id="Workshops-6-5-3-1-1">(4 points) Is the conclusion of this argument correct? Justify your answer.</div></li>
-<li id="Workshops-6-5-3-2"><div class="para" id="Workshops-6-5-3-2-1">(4 points) Show the necessary work to show that the given integral diverges.</div></li>
-<li id="Workshops-6-5-3-3"><div class="para" id="Workshops-6-5-3-3-1">(4 points) Exactly what error was made by the student in attempting to apply the Integral Test? What did they forget to check?</div></li>
-</ol></article><article class="exercise exercise-like" id="Workshops-6-6"><h3 class="heading"><span class="codenumber">3<span class="period">.</span></span></h3>
-<div class="para" id="Workshops-6-6-1">The main take away from the last two questions should be that you need to carefully check all the hypotheses of a convergence test in order to be sure its conclusion is correct. For each of the following series, carefully decide whether it converges or diverges, and if it converges, is the convergence absolute or conditional. By “carfully”, I mean you should do the following:</div>
+<ol class="lower-alpha" id="Workshops-6-5-1-2">
+<li id="Workshops-6-5-1-2-1"><div class="para logical" id="Workshops-6-5-1-2-1-1">
+<div class="para">(2 points) Briefly explain why this series can be written using sigma notation as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^{\left(\frac{3+(-1)^n}{2}\right)}}.
+\end{equation*}
+</div>
+</div></li>
+<li id="Workshops-6-5-1-2-2"><div class="para logical" id="Workshops-6-5-1-2-2-1">
+<div class="para">(4 points) Show, by writing out some terms that this series can also be written as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{n=1}^{\infty} \left(\frac{1}{2n-1} - \frac{1}{(2n)^2}\right)
+\end{equation*}
+</div>
+</div></li>
+<li id="Workshops-6-5-1-2-3"><div class="para" id="Workshops-6-5-1-2-3-1">(6 points) By combining the two fractions in the representation of this series in (b), and then using the Limit Comparison Test (with all hypotheses show (graph to show positivity)), show that this series diverges.</div></li>
+<li id="Workshops-6-5-1-2-4"><div class="para" id="Workshops-6-5-1-2-4-1">(3 points) Explain why this series demonstrates that you must check all hypotheses of the Alternating Series Test for its conclusion to be correct.</div></li>
+</ol>
+</div></article><article class="exercise exercise-like" id="Workshops-6-6"><h3 class="heading"><span class="codenumber">3<span class="period">.</span></span></h3>
+<div class="para" id="Workshops-6-6-1">(4 points each) The main take away from the last two questions should be that you need to carefully check all the hypotheses of a convergence test in order to be sure its conclusion is correct. For each of the following series, carefully decide whether it converges or diverges, and if it converges, is the convergence absolute or conditional. By “carefully”, I mean you should do the following:</div>
 <div class="para logical" id="Workshops-6-6-2"><ul class="disc" id="Workshops-6-6-2-1">
 <li id="Workshops-6-6-2-1-1"><div class="para" id="Workshops-6-6-2-1-1-1">State which test you will use and say why.</div></li>
 <li id="Workshops-6-6-2-1-2"><div class="para" id="Workshops-6-6-2-1-2-1">Show all the hypotheses of the test are satisfied.</div></li>
@@ -242,9 +254,6 @@ window.MathJax = {
 <li id="Workshops-6-6-3-1-1"><div class="para" id="Workshops-6-6-3-1-1-1"><span class="process-math">\(\displaystyle \sum\limits_{n=1}^{\infty} \frac{(-1)^{n+1}2^n}{n!}\)</span></div></li>
 <li id="Workshops-6-6-3-1-2"><div class="para" id="Workshops-6-6-3-1-2-1"><span class="process-math">\(\displaystyle \sum\limits_{n=1}^{\infty} \frac{(-1)^{n+1}}{\sqrt{n}}\)</span></div></li>
 <li id="Workshops-6-6-3-1-3"><div class="para" id="Workshops-6-6-3-1-3-1"><span class="process-math">\(\displaystyle \sum\limits_{n=1}^{\infty} \left(\frac{n}{3n+1}\right)^n\)</span></div></li>
-<li id="Workshops-6-6-3-1-4"><div class="para" id="Workshops-6-6-3-1-4-1">
-<span class="process-math">\(\sum\limits_{n=1}^{\infty} \sin^{3}\left(\frac{1}{n}\right)\)</span> Hint: For <span class="process-math">\(x\)</span> near zero, <span class="process-math">\(\sin(x)\approx x\text{.}\)</span>
-</div></li>
 </ol></div></article></section>
 </div>
 <div class="ptx-content-footer">
